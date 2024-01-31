@@ -2,6 +2,8 @@ package com.example.echanjo;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -29,12 +31,17 @@ public class DoctorProfileActivity extends AppCompatActivity {
     private String fullName,email,doB,gender,mobile;
     private ImageView imageView;
     private FirebaseAuth authProfile;
+    private SwipeRefreshLayout swipeContainer;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_profile);
+
+        getSupportActionBar().setTitle("Home");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        swipeToRefresh();
 
         textViewWelcome = findViewById(R.id.textView_show_welcome);
         textViewFullName = findViewById(R.id.textView_show_full_name);
@@ -64,6 +71,27 @@ public class DoctorProfileActivity extends AppCompatActivity {
             progressBar.setVisibility(View.VISIBLE);
             showUserProfile(firebaseUser);
         }
+    }
+
+    private void swipeToRefresh() {
+        //Looking up for the swipe container
+        swipeContainer = findViewById(R.id.swipeContainer);
+
+        //Setup Refresh Listener which triggers new data loading
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                //Code to Refresh goes here. Make sure to call swipe container.Set Refresh false once complete
+                startActivity(getIntent());
+                finish();
+                overridePendingTransition(0,0);
+                swipeContainer.setRefreshing(false);
+            }
+        });
+
+        //Configure Refresh Colors
+        swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,android.R.color.holo_green_light,
+                android.R.color.holo_red_light);
     }
 
     private void showUserProfile(FirebaseUser firebaseUser) {
@@ -123,7 +151,9 @@ public class DoctorProfileActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id==R.id.menu_refresh){
+        if(id== android.R.id.home){
+            NavUtils.navigateUpFromSameTask(DoctorProfileActivity.this);
+        }else if(id==R.id.menu_refresh){
             //RefreshActivity
             startActivity(getIntent());
             finish();

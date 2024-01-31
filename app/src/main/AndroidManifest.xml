@@ -23,19 +23,27 @@
             android:exported="false" />
         <activity
             android:name=".DoctorUploadPicture"
-            android:exported="false" />
+            android:exported="false" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorProfileActivity"/>
+        </activity>
         <activity
             android:name=".DoctorUpdateProfile"
-            android:exported="false" />
+            android:exported="false" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorProfileActivity"/>
+        </activity>
         <activity
             android:name=".DoctorUpdateEmail"
-            android:exported="false" />
+            android:exported="false" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorProfileActivity"/>
+        </activity>
         <activity
             android:name=".DoctorRegisterActivity"
             android:exported="false" />
         <activity
             android:name=".DoctorProfileActivity"
-            android:exported="false" />
+            android:exported="false" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorProfileActivity"/>
+        </activity>
         <activity
             android:name=".DoctorMainLogin"
             android:exported="false" />
@@ -44,13 +52,17 @@
             android:exported="false" />
         <activity
             android:name=".DoctorForgotPassword"
-            android:exported="false" />
+            android:exported="false" ><meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorMainLogin"/></activity>
         <activity
             android:name=".DoctorDeleteProfile"
-            android:exported="false" />
+            android:exported="false" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorProfileActivity"/>
+        </activity>
         <activity
             android:name=".DoctorChangePassword"
-            android:exported="false" />
+            android:exported="false" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorProfileActivity"/>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

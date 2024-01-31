@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -167,7 +168,9 @@ public class DoctorUploadPicture extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id==R.id.menu_refresh){
+        if(id== android.R.id.home) {
+            NavUtils.navigateUpFromSameTask(DoctorUploadPicture.this);
+        }else if(id==R.id.menu_refresh){
             //RefreshActivity
             startActivity(getIntent());
             finish();

@@ -2,6 +2,7 @@ package com.example.echanjo;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
@@ -182,7 +183,9 @@ public class DoctorUpdateEmail extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id==R.id.menu_refresh){
+        if(id== android.R.id.home) {
+            NavUtils.navigateUpFromSameTask(DoctorUpdateEmail.this);
+        }else if(id==R.id.menu_refresh){
             //RefreshActivity
             startActivity(getIntent());
             finish();

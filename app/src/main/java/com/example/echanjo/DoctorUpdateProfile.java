@@ -2,6 +2,7 @@ package com.example.echanjo;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -244,7 +245,9 @@ public class DoctorUpdateProfile extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id==R.id.menu_refresh){
+        if(id== android.R.id.home) {
+            NavUtils.navigateUpFromSameTask(DoctorUpdateProfile.this);
+        }else if(id==R.id.menu_refresh){
             //RefreshActivity
             startActivity(getIntent());
             finish();
