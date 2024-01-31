@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "761195045557",
+    "firebase_url": "https://echanjo-79dbc-default-rtdb.firebaseio.com",
+    "project_id": "echanjo-79dbc",
+    "storage_bucket": "echanjo-79dbc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761195045557:android:781ade15ec9f9c3eda94fc",
+        "android_client_info": {
+          "package_name": "com.example.echanjo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHHQT2DC_81YIrQiRlHMxjxwW2T9RbCZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".DoctorUpdateEmail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:backgroundTint="@color/teal_700"
+            android:background="@color/dark_green"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_login_instruction"
+                android:textColor="@color/white"
+                android:text="You can update your email address now. Please enter your password and verify before continuing."
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_marginTop="-50dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/border">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RL_current_email"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                >
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/imageViewEmail"
+                    android:src="@drawable/baseline_email_24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_update_email"
+                    android:text="Current Email"
+                    android:padding="6dp"
+                    android:layout_toEndOf="@id/imageViewEmail"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RL_update_email_old"
+                android:layout_below="@id/RL_current_email"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                >
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/imageViewEmail2"
+                    android:src="@drawable/baseline_email_24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_update_email_old"
+                    android:text="Current Email"
+                    android:padding="6dp"
+                    android:layout_toEndOf="@id/imageViewEmail2"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RL_pwd"
+                android:layout_below="@id/RL_update_email_old"
+                android:background="@drawable/border"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/imageViewPwd"
+                    android:src="@drawable/baseline_lock_24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_update_email_verify_password"
+                    android:layout_toEndOf="@id/imageViewPwd"
+                    android:padding="6dp"
+                    android:text="Password"
+                    />
+
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:id="@+id/divider_pwd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/textView_update_email_verify_password"
+                    android:background="@android:color/darker_gray"
+                    />
+
+                <EditText
+                    android:id="@+id/editText_update_email_verify_password"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_update_email_verify_password"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/imageViewPwd"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    android:padding="6dp"
+                    android:textCursorDrawable="@drawable/edittextcursor"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Authenticate"
+                android:id="@+id/button_authenticate_user"
+                android:layout_below="@id/RL_pwd"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/teal_700"
+                android:layout_marginRight="70dp"
+                android:layout_marginLeft="70dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RL_update_email_authenticated"
+                android:layout_below="@id/button_authenticate_user"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                >
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/imageViewEmail3"
+                    android:src="@drawable/baseline_email_24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_update_email_authenticated"
+                    android:text="Password"
+                    android:padding="6dp"
+                    android:layout_toEndOf="@id/imageViewEmail3"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RL_pwd_authenticate"
+                android:layout_below="@id/RL_update_email_authenticated"
+                android:background="@drawable/border"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/imageViewPwd4"
+                    android:src="@drawable/baseline_lock_24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_update_email_new"
+                    android:layout_toEndOf="@id/imageViewPwd4"
+                    android:padding="6dp"
+                    android:text="New Email"
+                    />
+
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:id="@+id/divider_pwd_authenticate"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/textView_update_email_new"
+                    android:background="@android:color/darker_gray"
+                    />
+
+                <EditText
+                    android:id="@+id/editText_update_email_new"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_update_email_new"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/imageViewPwd4"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter your new email"
+                    android:inputType="textEmailAddress"
+                    android:minHeight="48dp"
+                    android:padding="6dp"
+                    android:textCursorDrawable="@drawable/edittextcursor"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_update_email"
+                android:layout_below="@+id/RL_pwd_authenticate"
+                android:text="Update Email"
+                android:backgroundTint="@color/teal_700"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginLeft="70dp"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:elevation="10dp"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
