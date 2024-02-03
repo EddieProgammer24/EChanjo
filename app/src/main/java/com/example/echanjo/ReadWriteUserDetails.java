@@ -3,7 +3,7 @@ package com.example.echanjo;
 public class ReadWriteUserDetails {
     public String  fullname,doB, gender, mobile;
 
-    public ReadWriteUserDetails() {
+    ReadWriteUserDetails() {
     }
 
     public ReadWriteUserDetails(String textDoB, String textGender, String textMobile) {

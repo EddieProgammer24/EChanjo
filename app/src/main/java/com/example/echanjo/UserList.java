@@ -75,7 +75,6 @@ public class UserList extends AppCompatActivity {
         });
 
     }
-
     private void searchList(String text) {
         ArrayList<HelperClass> searchList = new ArrayList<>();
         for(HelperClass helperClass:list){

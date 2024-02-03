@@ -3,7 +3,7 @@ package com.example.echanjo;
 public class HelperClass {
     String name,email,username,password;
 
-    public HelperClass() {
+    HelperClass() {
     }
 
     public HelperClass(String name, String email, String username, String password) {

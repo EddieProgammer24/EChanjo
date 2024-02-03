@@ -39,8 +39,6 @@ public class DoctorProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_profile);
 
-        getSupportActionBar().setTitle("Home");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         swipeToRefresh();
 
         textViewWelcome = findViewById(R.id.textView_show_welcome);

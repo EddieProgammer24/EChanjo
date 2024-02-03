@@ -34,7 +34,6 @@ public class DoctorMainLogin extends AppCompatActivity {
     private EditText editTextLoginEmail, editTextLoginPwd;
     private ProgressBar progressBar;
     private FirebaseAuth authProfile;
-
     private static final String TAG = "LoginActivity";
 
     @Override
@@ -140,7 +139,7 @@ public class DoctorMainLogin extends AppCompatActivity {
                     try{
                         throw task.getException();
                     }catch (FirebaseAuthInvalidUserException e){
-                        editTextLoginEmail.setError("User does not exist or is nolonger valid.Please register again");
+                        editTextLoginEmail.setError("User does not exist or is no longer valid.Please register again");
                         editTextLoginEmail.requestFocus();
                     }catch (FirebaseAuthInvalidCredentialsException e) {
                         editTextLoginEmail.setError("Invalid credentials. Kindly, check and re-enter.");

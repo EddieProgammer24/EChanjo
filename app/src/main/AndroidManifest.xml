@@ -13,6 +13,21 @@
         android:theme="@style/Theme.EChanjo"
         tools:targetApi="31">
         <activity
+            android:name=".ChildDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UploadChildDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ChildDetails"
+            android:exported="false" />
+        <activity
+            android:name=".UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisteredDoctors"
+            android:exported="false" />
+        <activity
             android:name=".user_registration"
             android:exported="false" />
         <activity
@@ -23,27 +38,19 @@
             android:exported="false" />
         <activity
             android:name=".DoctorUploadPicture"
-            android:exported="false" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorProfileActivity"/>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".DoctorUpdateProfile"
-            android:exported="false" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorProfileActivity"/>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".DoctorUpdateEmail"
-            android:exported="false" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorProfileActivity"/>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".DoctorRegisterActivity"
             android:exported="false" />
         <activity
             android:name=".DoctorProfileActivity"
-            android:exported="false" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorProfileActivity"/>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".DoctorMainLogin"
             android:exported="false" />
@@ -52,17 +59,13 @@
             android:exported="false" />
         <activity
             android:name=".DoctorForgotPassword"
-            android:exported="false" ><meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorMainLogin"/></activity>
+            android:exported="false" />
         <activity
             android:name=".DoctorDeleteProfile"
-            android:exported="false" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorProfileActivity"/>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".DoctorChangePassword"
-            android:exported="false" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".DoctorProfileActivity"/>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

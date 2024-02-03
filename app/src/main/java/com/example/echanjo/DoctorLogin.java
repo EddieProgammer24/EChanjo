@@ -15,9 +15,6 @@ public class DoctorLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_login);
 
-        //Set Title
-        getSupportActionBar().setTitle("eChanjo");
-
         //Login Activity
         Button buttonLogin = findViewById(R.id.button_login);
         buttonLogin.setOnClickListener(new View.OnClickListener() {
