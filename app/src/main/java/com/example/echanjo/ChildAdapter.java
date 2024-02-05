@@ -37,17 +37,20 @@ public class ChildAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Glide.with(context).load(dataList.get(position).getDataImage()).into(holder.recImage);
-        holder.recTitle.setText(dataList.get(position).getDataTitle());
-        holder.recDesc.setText(dataList.get(position).getDataDesc());
-        holder.recLang.setText(dataList.get(position).getDataLang());
+        holder.recDoB.setText(dataList.get(position).getDoB());
+        holder.recFullName.setText(dataList.get(position).getFullName());
+        holder.recGender.setText(dataList.get(position).getWeight());
+        holder.recWeight.setText(dataList.get(position).getWeight());
 
         holder.recCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ChildDetailsActivity.class);
                 intent.putExtra("Image",dataList.get(holder.getAdapterPosition()).getDataImage());
-                intent.putExtra("Description",dataList.get(holder.getAdapterPosition()).getDataDesc());
-                intent.putExtra("Title",dataList.get(holder.getAdapterPosition()).getDataTitle());
+                intent.putExtra("DoB",dataList.get(holder.getAdapterPosition()).getDoB());
+                intent.putExtra("FullName",dataList.get(holder.getAdapterPosition()).getFullName());
+                intent.putExtra("Gender",dataList.get(holder.getAdapterPosition()).getGender());
+                intent.putExtra("Weight",dataList.get(holder.getAdapterPosition()).getWeight());
                 intent.putExtra("Key",dataList.get(holder.getAdapterPosition()).getKey());
 
                 context.startActivity(intent);
@@ -67,15 +70,16 @@ public class ChildAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
 class MyViewHolder extends RecyclerView.ViewHolder{
     ImageView recImage;
-    TextView recTitle,recDesc,recLang;
+    TextView recFullName,recDoB,recWeight,recGender;
     CardView recCard;
     public MyViewHolder(View itemView){
         super(itemView);
 
         recImage = itemView.findViewById(R.id.recImage);
         recCard = itemView.findViewById(R.id.recCard);
-        recDesc = itemView.findViewById(R.id.recDesc);
-        recLang = itemView.findViewById(R.id.recLang);
-        recTitle = itemView.findViewById(R.id.recTitle);
+        recFullName = itemView.findViewById(R.id.recFullName);
+        recDoB = itemView.findViewById(R.id.recDoB);
+        recWeight = itemView.findViewById(R.id.recWeight);
+        recGender = itemView.findViewById(R.id.recGender);
     }
 }

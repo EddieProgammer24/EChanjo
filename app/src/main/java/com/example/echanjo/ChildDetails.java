@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -61,13 +62,28 @@ public class ChildDetails extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 dataList.clear();
-                for (DataSnapshot itemSnapshot: snapshot.getChildren()){
-                    DataClass dataClass = itemSnapshot.getValue(DataClass.class);
-                    dataClass.setKey(itemSnapshot.getKey());
-                    dataList.add(dataClass);
+
+                try {
+                    for (DataSnapshot itemSnapshot : snapshot.getChildren()) {
+                        DataClass dataClass = itemSnapshot.getValue(DataClass.class);
+                        if (dataClass != null) {
+                            dataClass.setKey(itemSnapshot.getKey());
+                            dataList.add(dataClass);
+                        } else {
+                            // Log a message or handle the case where dataClass is null
+                            Log.e("ChildDetails", "Failed to convert DataSnapshot to DataClass");
+                        }
+                    }
+
+                    adapter.notifyDataSetChanged();
+
+                } catch (Exception e) {
+                    // Log the exception to help diagnose the issue
+                    Log.e("ChildDetails", "Exception in onDataChange", e);
+                    // Optionally, show a toast or handle the exception in some way
+                }finally {
+                    dialog.dismiss();
                 }
-                adapter.notifyDataSetChanged();
-                dialog.dismiss();
             }
 
             @Override
@@ -99,7 +115,7 @@ public class ChildDetails extends AppCompatActivity {
     public void searchList(String text){
         ArrayList<DataClass> searchList = new ArrayList<>();
         for (DataClass dataClass: dataList){
-            if(dataClass.getDataTitle().toLowerCase().contains(text.toLowerCase())){
+            if(dataClass.getFullName().toLowerCase().contains(text.toLowerCase())){
                 searchList.add(dataClass);
             }
         }

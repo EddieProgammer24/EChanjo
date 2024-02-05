@@ -18,10 +18,9 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 public class ChildDetailsActivity extends AppCompatActivity {
-
-    TextView detailDesc,detailTitle;
+    TextView detailDesc,detailTitle, detailLang;
     ImageView detailImage;
-    FloatingActionButton deleteButton;
+    FloatingActionButton deleteButton, editButton;
     String key = "";
     String imageUrl = "";
     @Override
@@ -33,12 +32,15 @@ public class ChildDetailsActivity extends AppCompatActivity {
         detailImage = findViewById(R.id.detailImage);
         detailTitle = findViewById(R.id.detailTitle);
         deleteButton = findViewById(R.id.deleteButton);
+        editButton = findViewById(R.id.editButton);
+        detailLang = findViewById(R.id.detailLang);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null)
         {
             detailDesc.setText(bundle.getString("Description"));
             detailTitle.setText(bundle.getString("Title"));
+            detailLang.setText(bundle.getString("Language"));
             key = bundle.getString("key");
             imageUrl = bundle.getString("Image");
             Glide.with(this).load(bundle.getString("Image")).into(detailImage);
@@ -61,5 +63,17 @@ public class ChildDetailsActivity extends AppCompatActivity {
                 });
             }
         });
+      /* editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChildDetailsActivity.this,ChildUpdateActivity.class)
+                        .putExtra("Title",detailTitle.getText().toString())
+                        .putExtra("Description",detailDesc.getText().toString())
+                        .putExtra("Language",detailLang.getText().toString())
+                        .putExtra("Image",imageUrl)
+                        .putExtra("Key",key);
+                startActivity(intent);
+            }
+        });*/
     }
 }
