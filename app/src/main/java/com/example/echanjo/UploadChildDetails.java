@@ -23,7 +23,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.google.android.gms.common.api.internal.TaskApiCall;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -168,16 +167,14 @@ public class UploadChildDetails extends AppCompatActivity {
             gender = radioButtonRegisterGenderSelected.getText().toString();
         }
 
-        //DataClass dataClass = new DataClass(fullName,doB,gender,weight,imageURL);
+        DataClass dataClass = new DataClass(doB,fullName,gender,weight);
         //We are changing the child from title to currentDate
         //because we will be updating title as well and it may affect child value
-
         //String currentDate = DateFormat.getDateInstance().format(Calendar.getInstance().getTime());
 
+       FirebaseDatabase.getInstance().getReference("Child Details")
 
-       /*FirebaseDatabase.getInstance().getReference("Child Details")
-
-                .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
+              .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
@@ -190,6 +187,6 @@ public class UploadChildDetails extends AppCompatActivity {
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(UploadChildDetails.this,e.getMessage().toString(),Toast.LENGTH_SHORT).show();
                     }
-                });*/
+                });
     }
 }

@@ -2,12 +2,15 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/recCard"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="12dp"
+    android:id="@+id/recCard"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    android:background="@color/white"
     app:cardCornerRadius="12dp"
-    android:layout_margin="16dp"
-    >
+    app:cardElevation="12dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,23 +18,73 @@
         android:layout_margin="16dp"
         android:orientation="vertical"
         >
-        <RelativeLayout
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/recImage"
+            android:src="@drawable/ic_profile"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        >
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical"
-            >
+            android:text="Name"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:id="@+id/recImage"
-                android:scaleType="centerCrop"
-                android:src="@drawable/mom"
-                app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
-                />
+        <TextView
+            android:id="@+id/recTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:text=""
+            android:textSize="20sp" />
+    </LinearLayout>
 
-        </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="51dp"
+            android:id="@+id/recLang"
+            android:text=""
+            android:padding="20sp"
+            android:justificationMode="inter_word"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -39,122 +92,24 @@
             android:orientation="horizontal"
             android:layout_gravity="center_vertical"
             >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="@color/teal_700"
+                android:textSize="20sp"
+                android:layout_marginBottom="12dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Full Name"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                />
-
-            <TextView
-                android:id="@+id/recFullName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=":"
-                android:textSize="24sp"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date of Birth"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                />
-
-            <TextView
-                android:id="@+id/recDoB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=":"
-                android:textSize="24sp"
-                />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Child's Weight:"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                />
-
-            <TextView
-                android:id="@+id/recWeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/recDesc"
                 android:text=""
-                android:textSize="24sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="12dp"
                 />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gender:"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/recGender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="24sp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <Button
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:text="Edit"
-                android:textAllCaps="false"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="10dp"
-                android:id="@+id/btnEdit"/>
-
-            <Button
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:text="Delete"
-                android:textAllCaps="false"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="10dp"
-                android:id="@+id/btnDelete"/>
         </LinearLayout>
 
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

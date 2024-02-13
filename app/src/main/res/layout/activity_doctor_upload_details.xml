@@ -10,7 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ChildUpdateActivity"
+        tools:context=".DoctorUploadDetails"
         android:background="@color/light_gray"
         >
 
@@ -26,7 +26,7 @@
                 android:background="#5CC09F">
 
                 <ImageView
-                    android:id="@+id/updateImage"
+                    android:id="@+id/uploadImage"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_centerInParent="true"
@@ -78,7 +78,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/updateFullName"
+                        android:id="@+id/uploadDesc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textView_update_profile_name"
@@ -117,7 +117,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView_update_profile_dob"
-                        android:text="Date of Birth"
+                        android:text="Description"
                         android:padding="6dp"
                         android:layout_toEndOf="@id/imageViewDoB"
                         />
@@ -132,7 +132,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/updateDoB"
+                        android:id="@+id/uploadTopic"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textView_update_profile_dob"
@@ -141,7 +141,7 @@
                         android:layout_toEndOf="@id/imageViewDoB"
                         android:background="@android:color/transparent"
                         android:hint="Select Child's Date of birth"
-                        android:inputType="date"
+                        android:inputType="text"
                         android:minHeight="48dp"
                         android:padding="6dp"
                         android:textCursorDrawable="@drawable/edittextcursor"
@@ -151,75 +151,9 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/RL_gender"
-                    android:layout_marginTop="20dp"
-                    android:layout_below="@id/RL_dob"
-                    android:background="@drawable/border"
-                    >
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:id="@+id/imageViewGender"
-                        android:src="@drawable/baseline_transgender_24"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView_update_profile_gender"
-                        android:text="Gender"
-                        android:padding="6dp"
-                        android:layout_toEndOf="@id/imageViewGender"
-                        />
-
-                    <View
-                        android:layout_width="250dp"
-                        android:layout_height="1dp"
-                        android:id="@+id/divider_gender"
-                        android:layout_centerHorizontal="true"
-                        android:layout_below="@id/textView_update_profile_gender"
-                        android:background="@android:color/darker_gray"
-                        />
-
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/updateGender"
-                        android:layout_below="@+id/textView_update_profile_gender"
-                        android:orientation="horizontal"
-                        android:layout_toEndOf="@id/imageViewGender"
-                        >
-
-                        <RadioButton
-                            android:id="@+id/radio_female"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Female"
-                            android:textColor="#666666"
-                            android:textSize="16sp"
-                            tools:ignore="TouchTargetSizeCheck" />
-
-                        <RadioButton
-                            android:id="@+id/radio_male"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Male"
-                            android:textColor="#666666"
-                            android:textSize="16sp"
-                            tools:ignore="TouchTargetSizeCheck" />
-                    </RadioGroup>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/RL_mobile"
                     android:layout_marginTop="20dp"
-                    android:layout_below="@id/RL_gender"
+                    android:layout_below="@id/RL_dob"
                     android:background="@drawable/border"
                     >
 
@@ -237,7 +171,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView_update_profile_mobile"
-                        android:text="Weight"
+                        android:text="Contact"
                         android:padding="6dp"
                         android:layout_toEndOf="@id/imageViewMobile"
                         />
@@ -252,12 +186,13 @@
                         />
 
                     <EditText
-                        android:id="@+id/updateWeight"
+                        android:id="@+id/uploadLang"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textView_update_profile_mobile"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/imageViewMobile"
                         android:background="@android:color/transparent"
                         android:hint="Enter Child's Weight"
                         android:inputType="text|number"
@@ -271,7 +206,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:text="Save"
-                    android:id="@+id/updateButton"
+                    android:id="@+id/saveButton"
                     android:layout_below="@id/RL_mobile"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"

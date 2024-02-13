@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UpdateActivity"
+        android:background="@drawable/abstract_bac"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/upload_bac">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/uploadImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/no_profile_pic"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/ic_profile"
+                    android:background="@drawable/ic_profile"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_show_full_name"
+                    android:layout_alignStart="@id/ic_profile"
+                    android:hint="Full Name"
+                    android:layout_marginStart="50dp"
+                    android:textSize="18sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/textView_show_full_name"
+                    android:background="@android:color/darker_gray"
+                    android:id="@+id/divider_name"
+                    />
+
+                <EditText
+                    android:id="@+id/uploadTopic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_show_full_name"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/ic_profile"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter Doctor's Full Name"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:padding="6dp"
+                    android:textCursorDrawable="@drawable/edittextcursor"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/info"
+                    android:background="@drawable/baseline_info_24"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_show_full_desc"
+                    android:layout_alignStart="@id/info"
+                    android:hint="Contact"
+                    android:layout_marginStart="50dp"
+                    android:textSize="18sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/textView_show_full_desc"
+                    android:background="@android:color/darker_gray"
+                    android:id="@+id/divider_desc"
+                    />
+
+                <EditText
+                    android:id="@+id/uploadDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_show_full_desc"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/info"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter Doctor's Contact"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="6dp"
+                    android:textCursorDrawable="@drawable/edittextcursor"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/lang"
+                    android:background="@drawable/baseline_info_24"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_show_lang"
+                    android:layout_alignStart="@id/lang"
+                    android:hint="Contact"
+                    android:layout_marginStart="50dp"
+                    android:textSize="18sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/textView_show_lang"
+                    android:background="@android:color/darker_gray"
+                    android:id="@+id/divider_lang"
+                    />
+
+                <EditText
+                    android:id="@+id/uploadLang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_show_lang"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/lang"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter Doctor's Contact"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="6dp"
+                    android:textCursorDrawable="@drawable/edittextcursor"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:id="@+id/saveButton"
+                android:backgroundTint="@color/teal_700"
+                android:background="@drawable/lavender_border"
+                android:layout_below="@id/RL_pwd_confirm"
+                android:layout_marginRight="70dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginBottom="200dp"
+                android:layout_centerHorizontal="true"
+                />
+        </LinearLayout>
+    </ScrollView>

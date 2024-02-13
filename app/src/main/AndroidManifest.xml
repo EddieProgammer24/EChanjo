@@ -13,6 +13,41 @@
         android:theme="@style/Theme.EChanjo"
         tools:targetApi="31">
         <activity
+            android:name=".DoctorUpdate"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorDetails"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorUploadDetails"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor"
+            android:exported="false" />
+        <activity
+            android:name=".TestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyActivity"
+            android:exported="false"
+            android:label="@string/title_activity_my"
+            android:theme="@style/Theme.EChanjo" />
+        <activity
+            android:name=".UploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChildDetailsView"
+            android:exported="false" />
+        <activity
             android:name=".ChildUpdateActivity"
             android:exported="false" />
         <activity

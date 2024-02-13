@@ -1,4 +1,4 @@
-/*package com.example.echanjo;
+package com.example.echanjo;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.echanjo.DataClass;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,14 +30,14 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class ChildUpdateActivity extends AppCompatActivity {
+public class UpdateActivity extends AppCompatActivity {
 
     ImageView updateImage;
     Button updateButton;
     EditText updateDesc, updateTitle, updateLang;
-    String title,desc,lang;
+    String title, desc, lang;
     String imageUrl;
-    String key,oldImageURL;
+    String key, oldImageURL;
     Uri uri;
     DatabaseReference databaseReference;
     StorageReference storageReference;
@@ -44,7 +45,7 @@ public class ChildUpdateActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_child_update);
+        setContentView(R.layout.activity_update);
 
         updateButton = findViewById(R.id.updateButton);
         updateDesc = findViewById(R.id.updateDesc);
@@ -57,30 +58,30 @@ public class ChildUpdateActivity extends AppCompatActivity {
                 new ActivityResultCallback<ActivityResult>() {
                     @Override
                     public void onActivityResult(ActivityResult result) {
-                        if(result.getResultCode() == Activity.RESULT_OK){
+                        if (result.getResultCode() == Activity.RESULT_OK){
                             Intent data = result.getData();
                             uri = data.getData();
                             updateImage.setImageURI(uri);
-                        }else{
-                            Toast.makeText(ChildUpdateActivity.this,"No Image Selected",Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(UpdateActivity.this, "No Image Selected", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
         );
         Bundle bundle = getIntent().getExtras();
-        if(bundle != null){
-            Glide.with(ChildUpdateActivity.this).load(bundle.getString("Image")).into(updateImage);
+        if (bundle != null){
+            Glide.with(UpdateActivity.this).load(bundle.getString("Image")).into(updateImage);
             updateTitle.setText(bundle.getString("Title"));
             updateDesc.setText(bundle.getString("Description"));
             updateLang.setText(bundle.getString("Language"));
             key = bundle.getString("Key");
             oldImageURL = bundle.getString("Image");
         }
-        databaseReference = FirebaseDatabase.getInstance().getReference("Child Details").child(key);
+        databaseReference = FirebaseDatabase.getInstance().getReference("Doctors Details").child(key);
 
         updateImage.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent photoPicker = new Intent(Intent.ACTION_PICK);
                 photoPicker.setType("image/*");
                 activityResultLauncher.launch(photoPicker);
@@ -88,16 +89,17 @@ public class ChildUpdateActivity extends AppCompatActivity {
         });
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ChildUpdateActivity.this,ChildDetails.class);
+            public void onClick(View view) {
+                saveData();
+                Intent intent = new Intent(UpdateActivity.this, TestActivity.class);
                 startActivity(intent);
             }
         });
     }
     public void saveData(){
-        storageReference = FirebaseStorage.getInstance().getReference().child("Child Images").child(uri.getLastPathSegment());
+        storageReference = FirebaseStorage.getInstance().getReference().child("Doctors Images").child(uri.getLastPathSegment());
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(ChildUpdateActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(UpdateActivity.this);
         builder.setCancelable(false);
         builder.setView(R.layout.progress_layout);
         AlertDialog dialog = builder.create();
@@ -125,23 +127,23 @@ public class ChildUpdateActivity extends AppCompatActivity {
         desc = updateDesc.getText().toString().trim();
         lang = updateLang.getText().toString();
 
-        DataClass dataClass = new DataClass(title, desc, lang,imageUrl);
+        DataClass dataClass = new DataClass(title, desc, lang, imageUrl);
 
         databaseReference.setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-                    StorageReference  reference = FirebaseStorage.getInstance().getReferenceFromUrl(oldImageURL);
+                if (task.isSuccessful()){
+                    StorageReference reference = FirebaseStorage.getInstance().getReferenceFromUrl(oldImageURL);
                     reference.delete();
-                    Toast.makeText(ChildUpdateActivity.this,"Updated",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UpdateActivity.this, "Updated", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(ChildUpdateActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(UpdateActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }
-}*/
+}
