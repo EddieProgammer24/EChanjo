@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".DetailActivity"
-        android:background="@drawable/abstract_bac"
+        android:background="@drawable/android"
         >
 
         <LinearLayout
@@ -23,8 +23,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:background="@drawable/upload_bac"
-                >
+                android:background="@drawable/upload_bac">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/detailImage"
@@ -42,67 +41,69 @@
                     android:id="@+id/detailTitle"
                     android:layout_below="@id/detailImage"
                     android:hint="Title"
-                    android:textStyle="bold"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="5dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                    />
+                    android:textColor="@color/white"/>
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="15dp"
                 android:layout_margin="15dp"
-                android:background="@color/white">
+                android:background="@color/white"
+                android:padding="15dp">
 
                 <ImageView
+                    android:id="@+id/ic_profile"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:id="@+id/ic_profile"
-                    android:background="@drawable/ic_profile"
-                    />
+                    android:background="@drawable/ic_profile" />
 
                 <TextView
+                    android:id="@+id/detailLang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/detailLang"
                     android:layout_alignStart="@id/ic_profile"
-                    android:hint="Loading"
                     android:layout_marginStart="50dp"
-                    android:textSize="18sp"
-                    />
+                    android:hint="Loading"
+                    android:textSize="18sp" />
 
                 <View
+                    android:id="@+id/divider_name"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="20dp"
                     android:layout_below="@id/detailLang"
-                    android:background="@android:color/darker_gray"
-                    android:id="@+id/divider_name"
-                    />
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/darker_gray" />
 
                 <ImageView
+                    android:id="@+id/ic_email"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:id="@+id/ic_email"
-                    android:background="@drawable/ic_email"
                     android:layout_below="@id/divider_name"
                     android:layout_marginTop="20dp"
-                    />
+                    android:background="@drawable/ic_email" />
 
                 <TextView
+                    android:id="@+id/detailDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/detailDesc"
-                    android:layout_alignStart="@id/ic_email"
-                    android:hint="Description"
                     android:layout_below="@id/divider_name"
+                    android:layout_alignStart="@id/ic_email"
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="20dp"
-                    android:textSize="18sp"
-                    />
+                    android:hint="Loading"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/divider_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/detailDesc"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/darker_gray" />
 
             </RelativeLayout>
 

@@ -1,46 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.drawerlayout.widget.DrawerLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:id="@+id/drawer_layout"
-    android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start"
-    >
-
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:headerLayout="@layout/header"
-        android:id="@+id/nav_view"
-        app:menu="@menu/main_menu"
-        android:layout_gravity="start"
-        />
-<RelativeLayout
     android:layout_width="match_parent"
     android:background="@drawable/mind"
     android:layout_height="match_parent"
     >
 
-    <TextView
-        android:id="@+id/title_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="eChanjo"
-        android:textColor="#fff"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginStart="9dp"
+        tools:ignore="MissingConstraints" />
+
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/title_view"
+        android:layout_below="@+id/viewPager"
         android:rowCount="3"
         android:columnCount="2"
         >
@@ -282,5 +263,3 @@
     </GridLayout>
 
 </RelativeLayout>
-
-</androidx.drawerlayout.widget.DrawerLayout>
