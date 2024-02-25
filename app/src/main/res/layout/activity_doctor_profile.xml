@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".DoctorProfileActivity"
-        android:background="@color/light_gray"
+        android:background="@drawable/doc"
         >
 
         <LinearLayout
@@ -23,7 +23,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:background="#5CC09F">
+                android:background="@drawable/abstract_bac">
 
                 <ImageView
                     android:id="@+id/imageView_profile_dp"

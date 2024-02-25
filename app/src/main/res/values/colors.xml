@@ -12,4 +12,8 @@
     <color name="dark_green">#006400</color>
     <color name="light_gray">#edf2f7</color>
     <color name="green">#00ff00</color>
+    <color name="colorPrimary">#00796b</color>
+    <color name="colorPrimaryDark">#00695C</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorOnPrimary">#000000</color>
 </resources>

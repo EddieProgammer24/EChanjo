@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_gray"
+    android:background="@drawable/abstract_bac"
     tools:context=".DoctorMainLogin">
     
     <LinearLayout
@@ -17,8 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:orientation="vertical"
-            android:backgroundTint="@color/teal_700"
-            android:background="@color/dark_green"
+            android:background="@drawable/infant_two"
             >
 
             <TextView
@@ -26,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_login_head"
                 android:layout_marginTop="30dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:text="Welcome Back!"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
@@ -36,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_login_instruction"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:text="Please login to continue"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
@@ -175,6 +174,7 @@
                 android:layout_height="wrap_content"
                 android:text="Login"
                 android:id="@+id/button_login"
+                android:background="@drawable/lavender_border"
                 android:layout_below="@id/RL_pwd"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/teal_700"

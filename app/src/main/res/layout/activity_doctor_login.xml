@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DoctorLogin"
-    android:background="@color/light_gray"
+    android:background="@drawable/abstract_bac"
     >
 
     <RelativeLayout
@@ -43,6 +43,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/button_login"
             android:text="Login"
+            android:background="@drawable/lavender_border"
             android:backgroundTint="@color/teal_700"
             android:layout_marginTop="100dp"
             android:layout_below="@id/textView_main_head"

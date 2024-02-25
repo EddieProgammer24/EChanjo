@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_gray"
+    android:background="@drawable/doc"
     tools:context=".DoctorRegisterActivity">
 
     <LinearLayout
@@ -17,8 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:orientation="vertical"
-            android:backgroundTint="@color/teal_700"
-            android:background="@color/dark_green"
+            android:background="@drawable/abstract_bac"
             >
 
             <TextView
@@ -26,7 +25,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_register_head"
                 android:textColor="@color/white"
-                android:text="Please enter your details to Register on the App"
+                android:layout_marginTop="20dp"
+                android:text="Register Now"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 />
@@ -434,7 +434,8 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login"
+                android:text="Register"
+                android:background="@drawable/lavender_border"
                 android:id="@+id/button_register"
                 android:layout_below="@id/RL_pwd_confirm"
                 android:layout_marginTop="30dp"

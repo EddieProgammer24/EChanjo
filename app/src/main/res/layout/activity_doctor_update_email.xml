@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_gray"
+    android:background="@drawable/update_bac"
     tools:context=".DoctorUpdateEmail">
 
     <LinearLayout
@@ -17,8 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:orientation="vertical"
-            android:backgroundTint="@color/teal_700"
-            android:background="@color/dark_green"
+            android:background="@drawable/vacc"
             >
 
             <TextView
@@ -26,7 +25,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_login_instruction"
                 android:textColor="@color/white"
-                android:text="You can update your email address now. Please enter your password and verify before continuing."
+                android:layout_marginTop="40dp"
+                android:text="Update Email"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 />
@@ -163,6 +163,7 @@
                 android:layout_below="@id/RL_pwd"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/teal_700"
+                android:background="@drawable/lavender_border"
                 android:layout_marginRight="70dp"
                 android:layout_marginLeft="70dp"
                 android:layout_centerHorizontal="true"
@@ -259,6 +260,7 @@
                 android:layout_below="@+id/RL_pwd_authenticate"
                 android:text="Update Email"
                 android:backgroundTint="@color/teal_700"
+                android:background="@drawable/lavender_border"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="70dp"
                 android:layout_marginLeft="70dp"/>
