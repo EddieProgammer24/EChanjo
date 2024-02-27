@@ -2,8 +2,48 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.EChanjo" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Base application theme. -->
+
+            <!-- Primary brand color. -->
+            <item name="colorPrimary">@color/purple_500</item>
+            <item name="colorPrimaryVariant">@color/purple_700</item>
+            <item name="colorOnPrimary">@color/white</item>
+            <!-- Secondary brand color. -->
+            <item name="colorSecondary">@color/teal_200</item>
+            <item name="colorSecondaryVariant">@color/teal_700</item>
+            <item name="colorOnSecondary">@color/black</item>
+            <!-- Status bar color. -->
+            <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+            <!-- Customize your theme here. -->
+        </style>
+
+        <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+            <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        </style>
+
+        <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+            <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+        </style>
+
+        <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+            <item name="android:background">@android:color/transparent</item>
+        </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+
     </style>
+
+
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <item name="boxStrokeColor">#296D98</item>
+            <item name="boxStrokeWidth">1dp</item>
+        </style>
+
+
+
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
 
 
     <style name="Theme.EChanjo" parent="Base.Theme.EChanjo" />
@@ -12,4 +52,6 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
+
 </resources>

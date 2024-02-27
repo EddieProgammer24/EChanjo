@@ -104,4 +104,9 @@
         <item>Measles, Mumps, and Rubella (MMR 3)</item>
     </string-array>
 
+
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+
+
 </resources>

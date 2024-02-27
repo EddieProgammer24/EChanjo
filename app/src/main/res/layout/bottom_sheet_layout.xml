@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/idRLBSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_shade_1"
+    android:padding="4dp">
+
+    <!--text view for displaying course name-->
+    <TextView
+        android:id="@+id/idTVFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:padding="4dp"
+        android:text="Full Name"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!--image view for displaying course image-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/recImage"
+        android:src="@drawable/ic_profile"
+        android:padding="4dp"
+        android:layout_margin="4dp"
+        android:layout_below="@id/idTVFullName"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"/>
+
+    <!--text view for displaying course description-->
+    <TextView
+        android:id="@+id/idTVDoB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recImage"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/recImage"
+        android:layout_toRightOf="@id/recImage"
+        android:padding="3dp"
+        android:text="Date of Birth"
+        android:textColor="@color/white" />
+
+    <!--text view for displaying course best suited for-->
+    <TextView
+        android:id="@+id/idTVGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVDoB"
+        android:layout_margin="4dp"
+        android:layout_toRightOf="@id/recImage"
+        android:padding="3dp"
+        android:text="Gender"
+        android:textColor="@color/white" />
+
+    <!--text view for displaying course price-->
+    <TextView
+        android:id="@+id/idTVWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVGender"
+        android:layout_margin="4dp"
+        android:layout_toRightOf="@id/recImage"
+        android:padding="3dp"
+        android:text="Weight"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVWeight"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!--button for editing course-->
+        <Button
+            android:id="@+id/idBtnEditDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:text="Edit Details"
+            android:textAllCaps="false" />
+
+        <!--button for viewing course details-->
+        <Button
+            android:id="@+id/idBtnVIewDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:text="View Details"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</RelativeLayout>

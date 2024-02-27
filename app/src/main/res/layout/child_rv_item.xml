@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="12dp"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="16dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/recView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/recImage"
+            android:src="@drawable/ic_profile"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name:"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txtFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="24sp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth:"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txtDoB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="24sp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender:"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txtGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="24sp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight:"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="24sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnEdit"/>
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnDelete"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

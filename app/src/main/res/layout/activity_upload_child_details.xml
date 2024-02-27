@@ -53,35 +53,16 @@
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:id="@+id/imageViewName"
-                        android:src="@drawable/baseline_person_24"
+                        android:src="@drawable/baseline_child_care_24"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView_update_profile_name"
-                        android:text="Full Name"
-                        android:padding="6dp"
-                        android:layout_toEndOf="@id/imageViewName"
-                        />
-
-                    <View
-                        android:layout_width="250dp"
-                        android:layout_height="1dp"
-                        android:id="@+id/divider_email"
-                        android:layout_centerHorizontal="true"
-                        android:layout_below="@id/textView_update_profile_name"
-                        android:background="@android:color/darker_gray"
                         />
 
                     <EditText
                         android:id="@+id/uploadFullName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/textView_update_profile_name"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_toEndOf="@id/imageViewName"
@@ -107,35 +88,16 @@
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:id="@+id/imageViewDoB"
-                        android:src="@drawable/baseline_edit_calendar_24"
+                        android:src="@drawable/baseline_edit_calendar"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView_update_profile_dob"
-                        android:text="Date of Birth"
-                        android:padding="6dp"
-                        android:layout_toEndOf="@id/imageViewDoB"
-                        />
-
-                    <View
-                        android:layout_width="250dp"
-                        android:layout_height="1dp"
-                        android:id="@+id/divider_dob"
-                        android:layout_centerHorizontal="true"
-                        android:layout_below="@id/textView_update_profile_dob"
-                        android:background="@android:color/darker_gray"
                         />
 
                     <EditText
                         android:id="@+id/uploadDoB"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/textView_update_profile_dob"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_toEndOf="@id/imageViewDoB"
@@ -150,7 +112,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:id="@+id/RL_gender"
                     android:layout_marginTop="20dp"
                     android:layout_below="@id/RL_dob"
@@ -161,36 +123,18 @@
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:id="@+id/imageViewGender"
-                        android:src="@drawable/baseline_transgender_24"
+                        android:src="@drawable/baseline_transgender"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView_update_profile_gender"
-                        android:text="Gender"
-                        android:padding="6dp"
-                        android:layout_toEndOf="@id/imageViewGender"
-                        />
-
-                    <View
-                        android:layout_width="250dp"
-                        android:layout_height="1dp"
-                        android:id="@+id/divider_gender"
-                        android:layout_centerHorizontal="true"
-                        android:layout_below="@id/textView_update_profile_gender"
-                        android:background="@android:color/darker_gray"
                         />
 
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/uploadGender"
-                        android:layout_below="@+id/textView_update_profile_gender"
                         android:orientation="horizontal"
+                        android:layout_centerInParent="true"
                         android:layout_toEndOf="@id/imageViewGender"
                         >
 
@@ -227,35 +171,16 @@
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:id="@+id/imageViewMobile"
-                        android:src="@drawable/baseline_phone_24"
+                        android:src="@drawable/baseline_monitor_weight_24"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView_update_profile_mobile"
-                        android:text="Weight"
-                        android:padding="6dp"
-                        android:layout_toEndOf="@id/imageViewMobile"
-                        />
-
-                    <View
-                        android:layout_width="250dp"
-                        android:layout_height="1dp"
-                        android:id="@+id/divider_mobile"
-                        android:layout_centerHorizontal="true"
-                        android:layout_below="@id/textView_update_profile_mobile"
-                        android:background="@android:color/darker_gray"
                         />
 
                     <EditText
                         android:id="@+id/uploadWeight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/textView_update_profile_mobile"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_toEndOf="@id/imageViewMobile"
@@ -271,6 +196,7 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
+                    android:background="@drawable/lavender_border"
                     android:text="Save"
                     android:id="@+id/saveButton"
                     android:layout_below="@id/RL_mobile"

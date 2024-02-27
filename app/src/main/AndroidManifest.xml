@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
+    <!-- permissions for internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,15 +14,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EChanjo"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
-            android:name=".CloudMessaging"
+            android:name=".EditChildActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChildView"
             android:exported="false" />
         <activity
             android:name=".AddChildDetails"
-            android:exported="false" />
-        <activity
-            android:name=".StudyPlanner"
             android:exported="false" />
         <activity
             android:name=".DoctorUpdate"
@@ -31,57 +34,22 @@
             android:name=".UpdateActivity"
             android:exported="false" />
         <activity
-            android:name=".DoctorDetailsActivity"
-            android:exported="false" />
-        <activity
             android:name=".DetailActivity"
             android:exported="false" />
         <activity
             android:name=".DoctorUploadDetails"
             android:exported="false" />
         <activity
-            android:name=".Doctor"
-            android:exported="false" />
-        <activity
             android:name=".TestActivity"
             android:exported="false" />
         <activity
-            android:name=".MyActivity"
-            android:exported="false"
-            android:label="@string/title_activity_my"
-            android:theme="@style/Theme.EChanjo" />
-        <activity
             android:name=".UploadActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ChildDetailsView"
-            android:exported="false" />
-        <activity
-            android:name=".ChildUpdateActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ChildDetailsActivity"
             android:exported="false" />
         <activity
             android:name=".UploadChildDetails"
             android:exported="false" />
         <activity
-            android:name=".ChildDetails"
-            android:exported="false" />
-        <activity
-            android:name=".UserActivity"
-            android:exported="false" />
-        <activity
             android:name=".RegisteredDoctors"
-            android:exported="false" />
-        <activity
-            android:name=".user_registration"
-            android:exported="false" />
-        <activity
-            android:name=".user_login"
-            android:exported="false" />
-        <activity
-            android:name=".UserList"
             android:exported="false" />
         <activity
             android:name=".DoctorUploadPicture"
@@ -115,7 +83,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
